@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Flask Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default" style="background-color: rgba(255, 228, 181, 0.8);">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">My Flask BlogApp</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/research_papers">Research papers</a></li>
+                <li><a href="/teachings">Teachings</a></li>
+                <li><a href="/blogposts">Blogposts</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        
+    <div class="container">
+        <div class="row">
+            <!--
+            <div class="col-md-4">
+                <img src="/static/images/img1.jpg" alt="Your Image" class="img-fluid rounded" style="max-width: 200px; height: auto;"> 
+            </div>
+
+            <div class="col-md-8">
+                <div class="jumbotron text-center">
+                    I am a dedicated Ph.D. conducting research in Economics of Science.
+                    My thesis explored collaboration dynamics and creativity within the research community. The thesis is titled <a href="https://github.com/Kwirtz/Structure-of-the-scientific-system-PhD">Understanding Scientific Collaboration and Mobility: A Creativity Perspective</a>.
+                    I have a keen interest in data-driven insights and visualizing complex datasets.
+
+                    <h3 id="key-competencies">Key Competencies</h3>
+                     <strong>Programming languages</strong>: 
+                    <img src="https://img.shields.io/badge/Python-31A8FF.svg?logo=python&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/R-276DC3.svg?logo=R&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badges&amp;logo=javascript&amp;logoColor=white" alt=""><br>
+
+                    <strong>Databases Management</strong>: 
+                    <img src="https://img.shields.io/badge/MySQL-4479A1.svg?logo=mysql&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/MongoDB-47A248.svg?logo=mongodb&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/Neo4j-008CC1.svg?logo=neo4j&amp;logoColor=white" alt=""><br>
+
+                    <strong>Data Viz</strong>: 
+                    <img src="https://img.shields.io/badge/Power%20Bi-F2C811.svg?logo=powerbi&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/Plotly-3F4F75.svg?logo=plotly&amp;logoColor=white" alt=""><br>
+
+                    <strong>Cloud Computing</strong>: 
+                    <img src="https://img.shields.io/badge/Amazon%20AWS-232F3E.svg?logo=amazon-aws&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/Amazon%20S3-569A31.svg?logo=amazon-s3&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C.svg?logo=apache-spark&amp;logoColor=white" alt=""> 
+                    <img src="https://img.shields.io/badge/Apache%20Hadoop-66CCFF.svg?logo=apache-hadoop&amp;logoColor=white" alt="">
+                    
+                    <h3 id="open-source-contributions">Open Source Contributions</h3>
+                    <a href="https://github.com/master-ds2e/NoSQL">SQL and NoSQL</a>, <a href="https://github.com/Kwirtz/Advanced_programming">Advanced Programming</a>
+                    <a href="https://github.com/Kwirtz/novelpy">Novelpy</a>
+
+                    <h3 id="connect-with-me">Connect with Me</h3>
+                    LinkedIn: [<a href="https://www.linkedin.com/in/k%C3%A9vin-wirtz-159ba823b/">https://www.linkedin.com/in/k%C3%A9vin-wirtz-159ba823b/</a>]
+                    Twitter: [@Wirtz_Kev]
+
+                    <h1 id="other-skills">Other Skills</h1>
+
+                    <h3 id="os">OS</h3>
+                    <p><img src="https://img.shields.io/badge/Windows-0078D6.svg?logo=Windows&amp;logoColor=black" alt="">
+                    <img src="https://img.shields.io/badge/Ubuntu-E95420.svg?logo=Ubuntu&amp;logoColor=white" alt=""></p>
+
+                    <h3 id="editors">Editors</h3>
+                    <p><img src="https://img.shields.io/badge/R%20Studio-75AADB?logo=rstudio&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Spyder-CC0000?style=for-the-badges&amp;logo=spyderide&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Jupyter%20Notebook-F37626?logo=jupyter&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Sublime%20Text-FF9800?style=for-the-badges&amp;logo=sublimetext&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Google%20Colab-F9AB00?logo=google-colab&amp;logoColor=white" alt=""></p>
+
+                    <h3 id="tools">Tools</h3>
+                    <p><img src="https://img.shields.io/badge/docker-2496ED?logo=docker&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/markdown-000000.svg?logo=markdown&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/overleaf-47A141.svg?logo=overleaf&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/LaTeX-008080.svg?logo=latex&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Terminal-4D4D4D.svg?logo=WindowsTerminal&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/PyPi-3775A9?style=for-the-badges&amp;logo=pypi&amp;logoColor=white" alt="">
+                    <img src="https://img.shields.io/badge/Microsoft%20Excel-217346?logo=microsoft-excel&amp;logoColor=white" alt=""></p>
+                </div>
+                        -->
+            </div>
+        </div>
+    </div>
+
+    </div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
