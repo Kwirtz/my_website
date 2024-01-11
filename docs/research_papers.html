@@ -15,7 +15,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">My Flask BlogApp</a>
+            <a class="navbar-brand" href="#"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -29,10 +29,146 @@
 </nav>
     <div class="container">
         
-    <div class="jumbtron text-center">
-        <h1>Welcome To my research papers</h1>
-        <p class="lead"> WiP.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <section class="about_teachings py-5">
+                    <div class="container text-md-left">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <!--<p class="lead">This page is dedicated to the different research paper I have done, their goals and results.</p>-->
+                        </div>
+                    </div>
+                </section>
+                <br>
+                <br>
+                <br>
+                
+                <!-- Course Content -->
+                <div class="post-box">
+                    <section id="publi3">
+                                            <details>
+                            <summary class="publi-title" style="font-size: 21px">
+                                <h3>Pelletier, P. and Wirtz, K., 2023. Sails and Anchors: The Complementarity of Exploratory and Exploitative Scientists in Knowledge Creation. arXiv preprint arXiv:2312.10476.
+                                    <span class="arrow">&gt;</span>
+                                </h3>
+                            </summary>
+                        
+                            <p class="lead">
+                                The goal of the paper was to....
+                            </p>
+
+                            <p class="lead">
+                                The publication can be found <a href="https://www.researchgate.net/publication/377107588_Sails_and_Anchors_The_Complementarity_of_Exploratory_and_Exploitative_Scientists_in_Knowledge_Creation" target="_blank">Here</a> 
+                            </p>
+
+                            <p class="lead">
+                                <strong>Methodology</strong>
+                            </p>
+                        </details>  
+                    </section>
+                </div>
+
+                <br>
+                <br>
+                 <div class="post-box">
+                <section id="publi2">
+                    <details>
+                        <summary class="publi-title">
+                            <h3>Pelletier, P. and Wirtz, K., 2022. Novelpy: A Python package to measure novelty and disruptiveness of bibliometric and patent data. arXiv preprint arXiv:2211.10346.
+                                <span class="arrow">&gt;</span>
+                            </h3>
+                        </summary>
+                                               <p class="lead">
+                            The goal of the paper was to....
+                        </p>
+
+                        <p class="lead">
+                            The publication can be found <a href="https://www.researchgate.net/publication/365613395_Novelpy_A_Python_package_to_measure_novelty_and_disruptiveness_of_bibliometric_and_patent_data" target="_blank">Here</a> 
+                        </p>
+
+                        <p class="lead">
+                            <strong>Methodology</strong>
+                        </p>     
+                    </details>        
+                </section>
+                </div>
+
+                
+                <br>
+                <br>
+                 <div class="post-box">
+                <section id="publi1">
+                    <details>
+                        <summary class="publi-title">
+                            <h3>Bianchini, S., Müller, M., Pelletier, P. and Wirtz, K., 2021. Global health science leverages established collaboration network to fight COVID-19. arXiv preprint arXiv:2102.00298.
+                                <span class="arrow">&gt;</span>
+                            </h3>
+                        </summary>
+                                               <p class="lead">
+                            The goal of the paper was to....
+                        </p>
+
+                        <p class="lead">
+                            The publication can be found <a href="https://www.researchgate.net/publication/348958550_Global_health_science_leverages_established_collaboration_network_to_fight_COVID-19" target="_blank">Here</a> 
+                        </p>
+
+                        <p class="lead">
+                            <strong>Methodology</strong>
+                        </p>     
+                    </details>        
+                </section>
+            </div>
+            </main>
+        </div>
     </div>
+    <style>
+summary {
+    cursor: pointer;
+    outline: none;
+}
+
+.publi-title h3 {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 10px; /* Adjust the margin as needed */
+    transition: transform 0.3s ease;
+    color: rgba(63, 103, 140, 0.7);
+}
+
+summary:hover .arrow {
+    transform: translateX(10px); /* Adjust the translation value as needed */
+}
+
+/* Optionally, reset other styles to ensure consistency across browsers */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary .arrow {
+    transform: rotate(90deg);
+}
+
+.post-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    background-color: rgba(240, 240, 240, 0.4); /* Light grey background with alpha */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+    /* Add any additional styling you want */
+}
+
+.post-box:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+
+    </style>
 
     </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

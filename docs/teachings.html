@@ -15,7 +15,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">My Flask BlogApp</a>
+            <a class="navbar-brand" href="#"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -56,13 +56,15 @@
                         <div class="row">
                             <div class="col-md-8 mx-auto">
                                 <p class="lead">I have been privileged to serve as a teacher in the Master Data Science for Economics and Business program at Strasbourg since 2020. In this capacity, I passionately contribute to the academic journey of students, guiding them through the intricacies of data science and its applications in economics and business domains. Currently, I teach two core courses:</p>
-
-                                    <ul style="font-size: 16px;">
-                                        <li><strong>Advanced Programming:</strong> This course delves into the advanced aspects of programming, equipping students with the skills to tackle complex coding challenges and implement innovative solutions.</li>
-                                        <li><strong>SQL and NoSQL:</strong> Focused on databases, this course explores the structured query language (SQL) and non-relational databases (NoSQL), providing students with a solid foundation in database management and manipulation.</li>
+                                    <p class="lead">
+                                    <ul>
+                                        <li style="font-size: 21px"><strong>Advanced Programming:</strong> This course delves into the advanced aspects of programming, equipping students with the skills to tackle complex coding challenges and implement innovative solutions.</li>
+                                        <li style="font-size: 21px"><strong>SQL and NoSQL:</strong> Focused on databases, this course explores the structured query language (SQL) and non-relational databases (NoSQL), providing students with a solid foundation in database management and manipulation.</li>
                                     </ul>
+                                    </p>
 
-                                <p class="lead">For detailed information on the syllabus for each course, please refer to the provided below.</p>
+
+                                <p class="lead">Please refer to the provided below for detailed information on the syllabus for each course.</p>
                         </div>
                     </div>
                 </section>
@@ -72,7 +74,14 @@
                 
                 <!-- Course Content -->
                 <section id="course1">
-                    <h1>SQL/NoSQL</h1>
+                                        <details>
+                        <summary class="course-title">
+                            <h1>SQL/NoSQL
+                            <span class="arrow">&gt;</span>
+                            </h1>
+                            
+                        </summary>
+                    
                         <p class="lead">
                             The primary objective of this course is to equip students with the knowledge and skills required to store and process non-relational data. The choice of storage system is contingent on factors such as data size and specific problem contexts, guiding students to select appropriate formats for their non-relational data. Throughout the course, Python will serve as the primary programming language. The syllabus begins with an exploration of basic unstructured formats, including JSON, XML, and dictionaries. Subsequently, students delve into the study of leading NoSQL databases such as <a href="https://www.mongodb.com/" target="_blank">MongoDB</a> and <a href="https://neo4j.com/download-neo4j-now" target="_blank">Neo4j</a>. The course concludes with a brief overview of other database alternatives.
                         </p>
@@ -110,6 +119,7 @@
                             <br>
                             - <a href="https://www.youtube.com/watch?v=E-1xI85Zog8&t" target="_blank">YouTube Tutorial on Python MongoDB</a>
                         </p>
+                    </details>  
                 </section>
 
                 <br>
@@ -117,11 +127,13 @@
                 <br>
                 <section id="course2">
                     <details>
-                        <summary>Click here to see something
+                        <summary class="course-title">
+                            <h1>
+                            Advanced Programming
+                            <span class="arrow">&gt;</span>
+                            </h1>
+                            
                         </summary>
-                    Here's more stuff below :)
-                    </details>
-                    <h1>Advanced Programming</h1>
                         <p class="lead">
                             The aim of this course is to teach students a solid set of programming tools to tackle real-world problems, especially in the context of big data. Answering complex questions may require cross-referencing multiple web sources, necessitating skills in fetching information (API/web scraping), cleaning diverse data formats (xml/json/pdf), feeding data to databases (SQL/noSQL), and utilizing available resources (CPU/GPU, cloud/notebook) for analysis (descriptive statistics, algorithms). Python will be the primary programming language throughout the course. Starting with a review of last year's programming concepts, including lists, dictionaries, functions, numpy, pandas, beautiful soup, and regex, the course swiftly progresses to scraping libraries and API usage, allowing students to dive into their projects early (see Grading for details). Advanced concepts such as Coocurrence, OOP, Parallelize, Decorators, Versioning, and an introduction to GPU programming and machine learning libraries will be covered in the later stages of the course. The objective is to provide insights into the entire process mentioned above.
                         </p>
@@ -173,10 +185,42 @@
                             <br>
                             - [Real Python](https://realpython.com/)
                         </p>           
+                    </details>        
                 </section>
             </main>
         </div>
     </div>
+    <style>
+summary {
+    cursor: pointer;
+    outline: none;
+}
+
+.course-title h1 {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 10px; /* Adjust the margin as needed */
+    transition: transform 0.3s ease;
+    color: rgba(63, 103, 140, 0.7);
+}
+
+summary:hover .arrow {
+    transform: translateX(10px); /* Adjust the translation value as needed */
+}
+
+/* Optionally, reset other styles to ensure consistency across browsers */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary .arrow {
+    transform: rotate(90deg);
+}
+
+    </style>
 
     </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
