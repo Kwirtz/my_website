@@ -4,8 +4,14 @@ from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 
 app = Flask(__name__)
+app.config['FREEZER_BASE_URL'] = 'https://kwirtz.github.io/my_website/'  # Replace with your GitHub Pages URL
+app.config['FREEZER_RELATIVE_URLS'] = True
+app.config['FLATPAGES_AUTO_RELOAD'] = True
+app.config['FLATPAGES_EXTENSION'] = '.md'
+app.config['FLATPAGES_ROOT'] = 'posts'
 pages = FlatPages(app)
 freezer = Freezer(app)
+
 
 @app.route('/')
 def index():
