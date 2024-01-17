@@ -6,7 +6,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<nav class="navbar navbar-default" style="background-color: rgba(255, 228, 181, 0.8);">
+<style>
+    .navbar-nav > li > a {
+        color: black !important;
+    }
+    .navbar-nav > li.active > a,
+    .navbar-nav > li.active > a:hover,
+    .navbar-nav > li.active > a:focus {
+        font-weight: bold;
+        background-color: rgba(255, 165, 0, 0.2) !important; /* Adjust the alpha value as needed */
+    }
+</style>
+
+<nav class="navbar navbar-default" style="background-color: rgba(255, 165, 0, 0.4);">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,40 +30,44 @@
             <a class="navbar-brand" href="#"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="https://kwirtz.github.io/my_website/">Home</a></li>
-                <li><a href="https://kwirtz.github.io/my_website/research_papers">Research papers</a></li>
-                <li><a href="https://kwirtz.github.io/my_website/teachings">Teachings</a></li>
-                <li><a href="https://kwirtz.github.io/my_website/blogposts">Blogposts</a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <li class=""><a href="https://kwirtz.github.io/my_website/">Home</a></li>
+                <li class=""><a href="https://kwirtz.github.io/my_website/cv">CV</a></li>
+                <li class="active"><a href="https://kwirtz.github.io/my_website/research_papers">Research papers</a></li>
+                <li class=""><a href="https://kwirtz.github.io/my_website/teachings">Teachings</a></li>
+                <li class=""><a href="https://kwirtz.github.io/my_website/blogposts">Blogposts</a></li>
             </ul>
         </div>
     </div>
 </nav>
     <div class="container">
         
+                <br>
+                <br>
+                <br>
     <div class="container-fluid">
         <div class="row">
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <section class="about_teachings py-5">
-                    <div class="container text-md-left">
-                        <div class="row">
-                            <div class="col-md-8 mx-auto">
-                                <!--<p class="lead">This page is dedicated to the different research paper I have done, their goals and results.</p>-->
-                        </div>
-                    </div>
-                </section>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" >
+                <!-- Add a container div with overflow property -->
+                <div class="content-container">
                 <br>
                 <br>
                 <br>
                 
+
                 <!-- Course Content -->
-                <div class="post-box">
+                <div class="col-md-4">
+                <div class="post-box" onclick="openPdf('publi3')">
                     <section id="publi3">
-                                            <details>
+                        <h3>Sails and Anchors: The Complementarity of Exploratory and Exploitative Scientists in Knowledge Creation. 
+                        </h3>
+                        <small style="font-size: 14px; color: #888; position: relative; bottom: 0;">Pelletier Pierre, Wirtz Kevin, 2023</small>
+                        <br>
+                        <a href="https://www.researchgate.net/publication/377107588_Sails_and_Anchors_The_Complementarity_of_Exploratory_and_Exploitative_Scientists_in_Knowledge_Creation" target="_blank">
+                            <small style="font-size: 14px; position: relative; bottom: 0;">Link</small></a> 
+                        <!--
+                        <details>
                             <summary class="publi-title" style="font-size: 21px">
-                                <h3>Pelletier, P. and Wirtz, K., 2023. Sails and Anchors: The Complementarity of Exploratory and Exploitative Scientists in Knowledge Creation. arXiv preprint arXiv:2312.10476.
-                                    <span class="arrow">&gt;</span>
-                                </h3>
                             </summary>
                         
                             <p class="lead">
@@ -65,21 +81,30 @@
                             <p class="lead">
                                 <strong>Methodology</strong>
                             </p>
-                        </details>  
+                        </details>
+                        -->  
                     </section>
                 </div>
+                </div>
 
-                <br>
-                <br>
-                 <div class="post-box">
+                <div class="col-md-4">
+                <div class="post-box" onclick="openPdf('publi2')">
                 <section id="publi2">
+                        <h3>Novelpy: A Python package to measure novelty and disruptiveness of bibliometric and patent data.
+                        </h3>
+                        <small style="font-size: 14px; color: #888; position: relative; bottom: 0;">Pelletier Pierre, Wirtz Kevin, 2022</small>
+                        <br>
+                        <a href="https://www.researchgate.net/publication/365613395_Novelpy_A_Python_package_to_measure_novelty_and_disruptiveness_of_bibliometric_and_patent_data" target="_blank">
+                            <small style="font-size: 14px; position: relative; bottom: 0;">Link</small></a> 
+                    <!--
                     <details>
                         <summary class="publi-title">
-                            <h3>Pelletier, P. and Wirtz, K., 2022. Novelpy: A Python package to measure novelty and disruptiveness of bibliometric and patent data. arXiv preprint arXiv:2211.10346.
+                            <h3>Novelpy: A Python package to measure novelty and disruptiveness of bibliometric and patent data.
                                 <span class="arrow">&gt;</span>
                             </h3>
+                            <small style="font-size: 14px; color: #888; position: relative; bottom: 0;">Pelletier Pierre, Wirtz Kevin, 2022</small>
                         </summary>
-                                               <p class="lead">
+                        <p class="lead">
                             The goal of the paper was to....
                         </p>
 
@@ -90,20 +115,28 @@
                         <p class="lead">
                             <strong>Methodology</strong>
                         </p>     
-                    </details>        
+                    </details>   
+                    -->      
                 </section>
                 </div>
+                </div>
 
-                
-                <br>
-                <br>
-                 <div class="post-box">
+                <div class="col-md-4">
+                 <div class="post-box" onclick="openPdf('publi1')">
                 <section id="publi1">
+                        <h3>Global health science leverages established collaboration network to fight COVID-19.
+                        </h3>
+                        <small style="font-size: 14px; color: #888; position: relative; bottom: 0;">Stefano Bianchini, Moritz Müller, Pelletier Pierre, Wirtz Kevin, 2021</small>
+                        <br>
+                        <a href="https://www.researchgate.net/publication/348958550_Global_health_science_leverages_established_collaboration_network_to_fight_COVID-19" target="_blank">
+                            <small style="font-size: 14px; position: relative; bottom: 0;">Link</small></a> 
+                    <!--                    
                     <details>
                         <summary class="publi-title">
-                            <h3>Bianchini, S., Müller, M., Pelletier, P. and Wirtz, K., 2021. Global health science leverages established collaboration network to fight COVID-19. arXiv preprint arXiv:2102.00298.
+                            <h3>Global health science leverages established collaboration network to fight COVID-19. 
                                 <span class="arrow">&gt;</span>
                             </h3>
+                            <small style="font-size: 14px; color: #888;">Stefano Bianchini, Moritz Müller, Pelletier Pierre, Wirtz Kevin, 2021</small>
                         </summary>
                                                <p class="lead">
                             The goal of the paper was to....
@@ -116,13 +149,26 @@
                         <p class="lead">
                             <strong>Methodology</strong>
                         </p>     
-                    </details>        
+                    </details>
+                    -->         
                 </section>
+                   </div>
+                </div>
+
+
+
             </div>
             </main>
         </div>
     </div>
-    <style>
+                <br>
+                <br>
+                <br>
+<div id="pdfContainer" style="display: none;">
+    <iframe id="pdfIframe" width="100%" height="1200px" frameborder="0"></iframe>
+</div>
+
+<style>
 summary {
     cursor: pointer;
     outline: none;
@@ -152,23 +198,60 @@ details[open] summary .arrow {
     transform: rotate(90deg);
 }
 
-.post-box {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
-    background-color: rgba(240, 240, 240, 0.4); /* Light grey background with alpha */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-
-    /* Add any additional styling you want */
+body {
+  margin: 0; /* Remove default body margin */
 }
+
+.content-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex; 
+}
+
+.col-md-4 {
+  flex: 0 0 45%; /* Set a fixed width of 50% for each .col-md-4 */
+  box-sizing: border-box;
+}
+
+.post-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+}
+
 
 .post-box:hover {
-    background-color: rgba(240, 240, 240, 1);
+    background-color: rgba(240, 240, 240, 0.7);
 }
 
+
     </style>
+
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+<script>
+    function openPdf(sectionId) {
+        // Get the first page of the PDF related to the specified section id
+        var pdfUrl =  'static//pdfs/' + sectionId + '.pdf';
+
+        // Set the source of the iframe to the PDF URL
+        document.getElementById('pdfIframe').src = pdfUrl;
+
+        // Display the div containing the iframe
+        document.getElementById('pdfContainer').style.display = 'block';
+    }
+</script>
+
 
     </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
