@@ -44,10 +44,111 @@
     <div class="container">
         
     <div>
-        <h1>First Blog Post</h1>
-        <p>January 15, 2022</p>
-        <div><h1>My First Blog Post</h1>
-<p>This is the content of my first blog post. You can write your Markdown content here.</p></div>
+        <h1>N°1 Getting Started with Python</h1>
+        <p>February 15, 2024</p>
+        <div><p>When diving into Python programming, setting up the right Integrated Development Environment (IDE) and configuring your development environment can be tricky but are crucial steps. In this guide, we'll explore the basic steps to get your Python environment up and running and some popular IDEs you can work on windows.</p>
+<p><br>
+<br>
+<br></p>
+<h2>Table of Contents</h2>
+<hr />
+<ul>
+<li><a href="#setting-up-your-environment">Setting Up Your Environment</a></li>
+<li><a href="#choosing-an-ide">Choosing an IDE</a></li>
+</ul>
+<p><br>
+<br>
+<br></p>
+<p><a name="setting-up-your-environment"></a></p>
+<h2>Setting Up Your Environment</h2>
+<hr />
+<p><a name="installing-python"></a></p>
+<h3>Installing Python</h3>
+<p>When I first started programming on Python I rushed to download the latest version on the <a href="https://www.python.org/">official Python website</a> then took a random IDE and struggled with downloading and importing packages. This was a problem with path and environment variables which could be solved easily during the installation of python by checking the box "add to the path". </p>
+<p>Since then I discovered Anaconda which helps a lot to get things started. Anaconda is a distribution of open-source programming and data science tools that simplifies the process of working with Python and other programming languages. I recommend to install Anaconda and the rest of the tutorials and blogpost will suppose that you have this installation. Make sure you get the last verion of Anaconda <a href="https://www.anaconda.com/download">Here</a> and that you check the box to add to the path as seen below. </p>
+<p><img src="static/images/post1_2.png"></p>
+<p>Once the installation you can check using a cmd line and type:</p>
+<pre style= "width:75%">
+<code>
+python --version
+</code>
+</pre>
+
+<p>and it should give you the current version of python (python 3.6.8 for example) and you should be able to use pip to install packages and run script like this:</p>
+<pre style= "width:75%">
+<code>
+pip install numpy
+python script.py
+</code>
+</pre>
+
+<p><br>
+<a name="virtual-environments"></a></p>
+<h3>Virtual Environments</h3>
+<p>Now, before diving into your first script, there are a couple of important things to know (though not necessary) to facilitate working with Python on different projects. One of those things is to create virtual environments. Virtual environments are designed to isolate project dependencies. Each environment will have its version of packages (you can also specify a Python version for an environment). This has three advantages.</p>
+<ul>
+<li>
+<p>The first one is to avoid compatibility issues. Each project can have its own set of libraries and versions without interfering with other projects on the same system. If you need a specific version of a library, let's say NumPy because it only works with a package you need (I had this experience with SciPy), then it does not affect other projects that need another version of NumPy.</p>
+</li>
+<li>
+<p>The next advantage is about reproducibility and sharing. Having an environment for a project/app makes it easier to collaborate or work on this project with another machine (local or on the cloud) because you just have to share your environment directly.</p>
+</li>
+<li>
+<p>Lastly, it's easier for debugging purposes. Having a specific environment makes it easier to pinpoint where the problem is.</p>
+</li>
+</ul>
+<p>Now that we know why to use an environment, we need to answer the question of how? As always in programming, there's not a single option that is the best suited for every case. The most basic way to create an environment in Python is to use venv or virtualenv. I personally do not like this option because you can't easily change your Python version. That's where Anaconda and Conda come into play. Conda is a package manager, independent of the Anaconda distribution, although it is included with Anaconda. Conda is used for package management, dependency resolution, and environment management. Since you have installed Anaconda, you should be able to use Conda directly in your command line and can create an environment with a specific version of Python.</p>
+<pre style= "width:75%">
+<code>
+ conda create -n blogposts python==3.10.8
+</code>
+</pre>
+
+<p>Let's take a look at this command step by step. 'conda create': This part of the command is instructing Conda to create a new environment. -n blogposts: The '-n' flag specifies the name of the new environment, and in this case, it is named "blogposts". You can replace "blogposts" with any other name you prefer for your environment. 'python==3.10.8': This part of the command specifies the version of Python that should be installed in the new environment. In this case, it is Python 3.10.8. You can modify this version to any other compatible Python version you want to use in your environment.
+After the installation, you need to activate the environment. This is a required step before installing packages in this environment.</p>
+<pre style= "width:75%">
+<code>
+ conda activate blogposts
+</code>
+</pre>
+
+<p>Now, every pip install on the command line where the environment is activated will be installed in this environment. If you want to share my_env, from the activated environment run:</p>
+<pre style= "width:75%">
+<code>
+ conda env export > environment.yml
+</code>
+</pre>
+
+<p>The '&gt;' flag will export the results of the command to the file environment.yml and will be saved in your active directory. Send the YAML file created this way to your collaborator or on another computer and run this:</p>
+<pre style= "width:75%">
+<code>
+ conda env create -f environment.yml
+</code>
+</pre>
+
+<p>Now that you have an environment for your project/code (In my case for the blogposts), let us adress the big question of what kind of IDE to use</p>
+<p><br>
+<br>
+<br>
+<a name="choosing-an-ide"></a></p>
+<h2>Choosing an IDE</h2>
+<hr />
+<p>An Integrated Development Environment (IDE) is a software application that offers comprehensive tools to programmers for software development. Typically, it encompasses a source code editor, debugging tools, build automation, and various features aimed at streamlining the software development process. In essence, an IDE serves as a toolkit for coding and testing purposes.</p>
+<p>For those with a background in R, RStudio is often the IDE of choice due to its exceptional automation and assistance features. Its quality is unmatched, and alternatives with similar capabilities are hard to come by. In the realm of Python, Spyder stands out as an IDE that closely resembles RStudio in terms of functionality and appearance.</p>
+<p>If you're working within a conda environment, installing and launching Spyder is a straightforward process. It's worth noting that in the provided example, Spyder is installed within the "blogposts" environment. Alternatively, you can opt for a standard Spyder installation and adjust the Python path in the settings if needed.</p>
+<pre style= "width:75%">
+<code>
+ conda activate blogposts
+ pip install spyder
+ spyder
+</code>
+</pre>
+
+<p>Spyder is my preferred IDE for writing and testing Python scripts. However, there may come a time when you need to work with files beyond Python scripts (with a .py extension). You might encounter markdown files (.md), Jupyter notebooks (.ipynb), or even configuration files (.cfg). For handling these cases, I turn to an editor that has gained popularity and interest in recent years: <a href="https://code.visualstudio.com/">Visual Studio Code</a>. In my daily workflow, I use a combination of Spyder and Visual Studio Code, but feel free to explore other alternatives that may better suit your preferences.</p>
+<p>Now that the environment is set up, the next blog post will delve into a hands-on experience with Python. Following that, we'll explore additional crucial aspects of app and project development, including topics such as Git, Docker, CI/CD, and more. Stay tuned for further insights and guidance on enhancing your development workflow.</p>
+<p><br>
+<br>
+<br></p></div>
     </div>
 
     </div>
